@@ -5,15 +5,15 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 import waytoodanny.todo.domain.Task
-import waytoodanny.todo.usecase.CreateTask
+import waytoodanny.todo.usecase.CreateTaskCommand
 import java.net.URI
 
 @RestController
-class CreateTaskController(val createTask: CreateTask) {
+class CreateTaskController(val createTaskCommand: CreateTaskCommand) {
 
     @PostMapping("/api/task/create")
     fun createTask(@RequestBody task: CreateTaskDto): ResponseEntity<String> {
-        val persistedTask = createTask.apply(task.toDomainEntity())
+        val persistedTask = createTaskCommand.apply(task.toDomainEntity())
         val taskUri = URI.create("/api/task/").resolve(persistedTask.id.toString())
         return ResponseEntity.created(taskUri).build()
     }

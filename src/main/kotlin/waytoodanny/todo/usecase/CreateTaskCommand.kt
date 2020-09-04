@@ -2,6 +2,6 @@ package waytoodanny.todo.usecase
 
 import waytoodanny.todo.domain.Task
 
-interface CreateTask {
+interface CreateTaskCommand {
     fun apply(task: Task): Task
 }

@@ -26,26 +26,38 @@ extra["snippetsDir"] = file("build/generated-snippets")
 extra["springCloudVersion"] = "Hoxton.SR7"
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-hateoas")
-//    implementation("org.springframework.boot:spring-boot-starter-security")
-    implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.boot:spring-boot-starter-webflux")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+
+    //KOTLIN
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+
+    //SPRING
+    implementation("org.springframework.boot:spring-boot-starter-hateoas")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-webflux")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+
+    //TEST
+    testImplementation("io.projectreactor:reactor-test")
+    testImplementation("org.springframework.restdocs:spring-restdocs-mockmvc")
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
-    testImplementation("io.projectreactor:reactor-test")
-    testImplementation("org.springframework.cloud:spring-cloud-starter-contract-verifier")
-    testImplementation("org.springframework.restdocs:spring-restdocs-mockmvc")
-    testImplementation("org.springframework.security:spring-security-test")
 
+    //OTHER
+    implementation("org.postgresql:postgresql:42.2.2")
     implementation("io.vavr:vavr:0.10.3")
+    implementation("org.mapstruct:mapstruct:1.3.1.Final")
+    annotationProcessor("org.mapstruct:mapstruct-processor:1.3.1.Final")
+
+//    testImplementation("org.springframework.cloud:spring-cloud-starter-contract-verifier")
+//    implementation("org.springframework.boot:spring-boot-starter-security")
+//    testImplementation("org.springframework.security:spring-security-test")
 }
 
 dependencyManagement {
