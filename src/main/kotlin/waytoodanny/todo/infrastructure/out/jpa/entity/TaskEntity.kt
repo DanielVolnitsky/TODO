@@ -17,5 +17,6 @@ data class TaskEntity(
         @Column(nullable = false)
         var description: String
 ) {
-    constructor()
+    constructor() : this(null, "") {
+    }
 }

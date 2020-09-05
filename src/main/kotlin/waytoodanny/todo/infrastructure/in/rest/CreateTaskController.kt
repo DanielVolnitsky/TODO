@@ -11,7 +11,7 @@ import java.net.URI
 @RestController
 class CreateTaskController(val createTaskCommand: CreateTaskCommand) {
 
-    @PostMapping("/api/task/create")
+    @PostMapping("/task/create")
     fun createTask(@RequestBody task: CreateTaskDto): ResponseEntity<String> {
         val persistedTask = createTaskCommand.apply(task.toDomainEntity())
         val taskUri = URI.create("/api/task/").resolve(persistedTask.id.toString())

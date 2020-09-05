@@ -4,6 +4,7 @@ import org.mapstruct.Mapper
 import waytoodanny.todo.domain.Task
 import waytoodanny.todo.infrastructure.out.jpa.entity.TaskEntity
 import waytoodanny.todo.service.persistence.TaskRepository
+import java.util.stream.Collectors.toSet
 
 class JpaTaskRepositoryAdapter(
         private val jpaRepository: JpaTaskRepository,
@@ -16,6 +17,11 @@ class JpaTaskRepositoryAdapter(
                             taskMapper.domainToEntity(task)
                     )
             )
+
+    override fun allTasks(): Set<Task> = jpaRepository.findAll()
+            .stream()
+            .map(taskMapper::entityToDomain)
+            .collect(toSet())
 
     @Mapper
     interface TaskMapper {
