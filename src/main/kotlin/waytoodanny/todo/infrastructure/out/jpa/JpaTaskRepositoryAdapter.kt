@@ -1,6 +1,5 @@
 package waytoodanny.todo.infrastructure.out.jpa
 
-import org.mapstruct.Mapper
 import waytoodanny.todo.domain.Task
 import waytoodanny.todo.infrastructure.out.jpa.entity.TaskEntity
 import waytoodanny.todo.service.persistence.TaskRepository
@@ -23,7 +22,6 @@ class JpaTaskRepositoryAdapter(
             .map(taskMapper::entityToDomain)
             .collect(toSet())
 
-    @Mapper
     interface TaskMapper {
         fun entityToDomain(entity: TaskEntity): Task
         fun domainToEntity(domain: Task): TaskEntity

@@ -1,12 +1,10 @@
 package waytoodanny.todo.infrastructure.out.jpa.entity
 
 import org.hibernate.annotations.GenericGenerator
-import javax.persistence.Column
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
+import javax.persistence.*
 
 @Entity
+@Table(name = "task")
 data class TaskEntity(
 
         @Id
