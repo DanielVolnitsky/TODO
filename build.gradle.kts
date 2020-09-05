@@ -32,13 +32,15 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 
     //SPRING
-    implementation("org.springframework.boot:spring-boot-starter-hateoas")
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework.boot:spring-boot-starter-hateoas")
+
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 
@@ -54,6 +56,7 @@ dependencies {
     implementation("io.vavr:vavr:0.10.3")
     implementation("org.mapstruct:mapstruct:1.3.1.Final")
     annotationProcessor("org.mapstruct:mapstruct-processor:1.3.1.Final")
+
 
 //    implementation("org.postgresql:postgresql:42.2.2")
 //    testImplementation("org.springframework.cloud:spring-cloud-starter-contract-verifier")

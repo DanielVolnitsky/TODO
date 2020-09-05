@@ -8,3 +8,8 @@ spring:
     username: sa
     password: password
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: beans
