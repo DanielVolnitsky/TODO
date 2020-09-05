@@ -9,19 +9,23 @@ import waytoodanny.todo.infrastructure.out.jpa.entity.TaskEntity
 import waytoodanny.todo.service.persistence.TaskRepository
 import waytoodanny.todo.service.usecase.command.CreateTaskCommandImpl
 import waytoodanny.todo.service.usecase.query.AllTasksQueryImpl
+import waytoodanny.todo.service.usecase.query.TaskByIdQueryImpl
 import waytoodanny.todo.usecase.AllTasksQuery
 import waytoodanny.todo.usecase.CreateTaskCommand
+import waytoodanny.todo.usecase.TaskByIdQuery
 import java.util.*
 
 @Configuration
 class RootConfiguration {
 
     @Bean
-    fun createTaskCommand(taskRepository: TaskRepository): CreateTaskCommand =
-            CreateTaskCommandImpl(taskRepository)
+    fun createTaskCommand(taskRepository: TaskRepository): CreateTaskCommand = CreateTaskCommandImpl(taskRepository)
 
     @Bean
     fun allTasksQuery(taskRepository: TaskRepository): AllTasksQuery = AllTasksQueryImpl(taskRepository)
+
+    @Bean
+    fun taskByIdQuery(taskRepository: TaskRepository): TaskByIdQuery = TaskByIdQueryImpl(taskRepository)
 
     @Bean
     fun taskRepository(jpaTaskRepository: JpaTaskRepository): TaskRepository =

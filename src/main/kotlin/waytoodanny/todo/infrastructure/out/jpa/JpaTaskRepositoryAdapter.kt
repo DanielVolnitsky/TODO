@@ -3,6 +3,7 @@ package waytoodanny.todo.infrastructure.out.jpa
 import waytoodanny.todo.domain.Task
 import waytoodanny.todo.infrastructure.out.jpa.entity.TaskEntity
 import waytoodanny.todo.service.persistence.TaskRepository
+import java.util.*
 import java.util.stream.Collectors.toSet
 
 class JpaTaskRepositoryAdapter(
@@ -21,6 +22,12 @@ class JpaTaskRepositoryAdapter(
             .stream()
             .map(taskMapper::entityToDomain)
             .collect(toSet())
+
+    override fun taskWithId(id: UUID): Task? =
+            //TODO make Optional unwrapExtension
+            jpaRepository.findById(id.toString()).orElse(null)
+                    ?.let(taskMapper::entityToDomain)
+
 
     interface TaskMapper {
         fun entityToDomain(entity: TaskEntity): Task
