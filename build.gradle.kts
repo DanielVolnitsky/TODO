@@ -55,12 +55,14 @@ dependencies {
 
     //OTHER
     implementation("com.h2database:h2:1.4.200")
+    implementation("org.postgresql:postgresql:42.2.2")
+
     implementation("io.vavr:vavr:0.10.3")
+
     implementation("org.mapstruct:mapstruct:1.3.1.Final")
     annotationProcessor("org.mapstruct:mapstruct-processor:1.3.1.Final")
 
 
-//    implementation("org.postgresql:postgresql:42.2.2")
 //    testImplementation("org.springframework.cloud:spring-cloud-starter-contract-verifier")
 //    implementation("org.springframework.boot:spring-boot-starter-security")
 //    testImplementation("org.springframework.security:spring-security-test")
