@@ -62,8 +62,8 @@ dependencies {
     implementation("org.mapstruct:mapstruct:1.3.1.Final")
     annotationProcessor("org.mapstruct:mapstruct-processor:1.3.1.Final")
 
+    implementation("io.github.microutils:kotlin-logging-jvm:2.0.2")
 
-//    testImplementation("org.springframework.cloud:spring-cloud-starter-contract-verifier")
 //    implementation("org.springframework.boot:spring-boot-starter-security")
 //    testImplementation("org.springframework.security:spring-security-test")
 }
