@@ -1,4 +1,4 @@
-package waytoodanny.todo.infrastructure.out.jpa.entity
+package waytoodanny.todo.infrastructure.jpa.entity
 
 import org.hibernate.annotations.GenericGenerator
 import javax.persistence.*

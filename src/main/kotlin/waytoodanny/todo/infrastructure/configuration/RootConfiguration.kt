@@ -3,9 +3,9 @@ package waytoodanny.todo.infrastructure.configuration
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import waytoodanny.todo.domain.Task
-import waytoodanny.todo.infrastructure.out.jpa.JpaTaskRepository
-import waytoodanny.todo.infrastructure.out.jpa.JpaTaskRepositoryAdapter
-import waytoodanny.todo.infrastructure.out.jpa.entity.TaskEntity
+import waytoodanny.todo.infrastructure.jpa.JpaTaskRepository
+import waytoodanny.todo.infrastructure.jpa.JpaTaskRepositoryAdapter
+import waytoodanny.todo.infrastructure.jpa.entity.TaskEntity
 import waytoodanny.todo.service.persistence.TaskRepository
 import waytoodanny.todo.service.usecase.command.CreateTaskCommandImpl
 import waytoodanny.todo.service.usecase.query.AllTasksQueryImpl

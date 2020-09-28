@@ -1,4 +1,4 @@
-package waytoodanny.todo.infrastructure.`in`.rest
+package waytoodanny.todo.infrastructure.rest
 
 import mu.KotlinLogging
 import org.springframework.http.ResponseEntity

@@ -1,7 +1,7 @@
-package waytoodanny.todo.infrastructure.out.jpa
+package waytoodanny.todo.infrastructure.jpa
 
 import waytoodanny.todo.domain.Task
-import waytoodanny.todo.infrastructure.out.jpa.entity.TaskEntity
+import waytoodanny.todo.infrastructure.jpa.entity.TaskEntity
 import waytoodanny.todo.service.persistence.TaskRepository
 import java.util.*
 import java.util.stream.Collectors.toSet

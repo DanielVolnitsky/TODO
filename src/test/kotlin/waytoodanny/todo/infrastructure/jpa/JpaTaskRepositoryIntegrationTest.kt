@@ -1,4 +1,4 @@
-package waytoodanny.todo.infrastructure.out.jpa
+package waytoodanny.todo.infrastructure.jpa
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
 import org.springframework.test.context.junit.jupiter.SpringExtension
-import waytoodanny.todo.infrastructure.out.jpa.entity.TaskEntity
+import waytoodanny.todo.infrastructure.jpa.entity.TaskEntity
 
 @ExtendWith(SpringExtension::class)
 @DataJpaTest
