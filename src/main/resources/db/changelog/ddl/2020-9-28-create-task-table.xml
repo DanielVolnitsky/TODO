@@ -1,0 +1,11 @@
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="create-task-table" author="Daniel Volnitsky waytodanny@gmail.com">
+        <sqlFile
+                path="sql/2020-9-28-create-task-table.sql"
+                relativeToChangelogFile="true"
+        />
+    </changeSet>
+</databaseChangeLog>

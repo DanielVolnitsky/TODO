@@ -35,6 +35,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+    implementation("io.github.microutils:kotlin-logging-jvm:2.0.2")
 
     //SPRING
     implementation("org.springframework.boot:spring-boot-starter-web")
@@ -62,7 +63,8 @@ dependencies {
     implementation("org.mapstruct:mapstruct:1.3.1.Final")
     annotationProcessor("org.mapstruct:mapstruct-processor:1.3.1.Final")
 
-    implementation("io.github.microutils:kotlin-logging-jvm:2.0.2")
+    //LIQUIBASE
+    implementation("org.liquibase:liquibase-core:4.0.0")
 
 //    implementation("org.springframework.boot:spring-boot-starter-security")
 //    testImplementation("org.springframework.security:spring-security-test")
