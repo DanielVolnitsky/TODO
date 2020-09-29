@@ -1,8 +1,4 @@
 spring:
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
   datasource:
     url: jdbc:postgresql://database:5432/todo
     username: todo-root

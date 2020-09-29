@@ -2,15 +2,11 @@ package waytoodanny.todo.infrastructure.jpa
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
-import org.springframework.test.context.junit.jupiter.SpringExtension
+import waytoodanny.todo.CommonIntegrationTest
 import waytoodanny.todo.infrastructure.jpa.entity.TaskEntity
 
-@ExtendWith(SpringExtension::class)
-@DataJpaTest
-class JpaTaskRepositoryIntegrationTest(@Autowired val sut: JpaTaskRepository) {
+class JpaTaskRepositoryIntegrationTest(@Autowired val sut: JpaTaskRepository) : CommonIntegrationTest() {
 
     @Test
     fun `when save then assert entity is fetched with generated id`() {

@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  liquibase:
+    url: #will be dynamically set based on 'testcontainers's container attributes
+    change-log: db/changelog/db.changelog-master.xml
+    enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  datasource:
+    url: #will be dynamically set based on 'testcontainers's container attributes
+    username: #will be dynamically set based on 'testcontainers's container attributes
+    password: #will be dynamically set based on 'testcontainers's container attributes
+    driver-class-name: org.postgresql.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connection-test-query: SELECT 1
