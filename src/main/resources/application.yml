@@ -13,6 +13,8 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
       connection-test-query: SELECT 1
+  liquibase:
+    change-log: db/changelog/db.changelog-master.xml
 
 management:
   endpoints:
