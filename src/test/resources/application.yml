@@ -5,6 +5,7 @@ spring:
   liquibase:
     url: #will be dynamically set based on 'testcontainers's container attributes
     change-log: db/changelog/db.changelog-master.xml
+    enabled: true
   jpa:
     hibernate:
       ddl-auto: validate
