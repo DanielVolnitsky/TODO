@@ -6,16 +6,13 @@ spring:
     hibernate:
       ddl-auto: validate
   datasource:
-    url: jdbc:postgresql://localhost:5433/todo
-    username: todo-root
-    password: todo-root
+    #BEGIN will be dynamically set based on 'testcontainers's container attributes
+    url:
+    username:
+    password:
+    #END
+
     driver-class-name: org.postgresql.Driver
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
       connection-test-query: SELECT 1
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: beans
