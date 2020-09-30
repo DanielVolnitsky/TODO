@@ -6,10 +6,10 @@ import waytoodanny.todo.domain.Task
 import waytoodanny.todo.infrastructure.jpa.JpaTaskRepository
 import waytoodanny.todo.infrastructure.jpa.JpaTaskRepositoryAdapter
 import waytoodanny.todo.infrastructure.jpa.entity.TaskEntity
+import waytoodanny.todo.service.AllTasksQueryImpl
+import waytoodanny.todo.service.CreateTaskCommandImpl
+import waytoodanny.todo.service.TaskByIdQueryImpl
 import waytoodanny.todo.service.persistence.TaskRepository
-import waytoodanny.todo.service.usecase.command.CreateTaskCommandImpl
-import waytoodanny.todo.service.usecase.query.AllTasksQueryImpl
-import waytoodanny.todo.service.usecase.query.TaskByIdQueryImpl
 import waytoodanny.todo.usecase.AllTasksQuery
 import waytoodanny.todo.usecase.CreateTaskCommand
 import waytoodanny.todo.usecase.TaskByIdQuery

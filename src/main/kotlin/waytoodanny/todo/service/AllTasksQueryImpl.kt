@@ -1,4 +1,4 @@
-package waytoodanny.todo.service.usecase.query
+package waytoodanny.todo.service
 
 import waytoodanny.todo.domain.Task
 import waytoodanny.todo.service.persistence.TaskRepository
